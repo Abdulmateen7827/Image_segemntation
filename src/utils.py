@@ -1,6 +1,6 @@
 import os
 import sys
-
+import tensorflow as tf
 import dill
 import pickle
 

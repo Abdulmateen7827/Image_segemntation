@@ -9,15 +9,16 @@ import numpy as np
 from dataclasses import dataclass
 from src.components.data_preprocessing import DataPreprocessing
 from src.pipeline.training_pipeline import ModelTrainer
+from src.pipeline.prediction_pipeline import PredictPipeline
 
 
-path = '/Users/abdulmateen/Downloads/car-segmentation' 
+path = '/Users/abdulmateen/Downloads/archive' 
 
 @dataclass
 class DataIngestionConfig:
 
-    images_data: str = os.path.join(path, 'images')
-    masks_data: str = os.path.join(path, 'masks')
+    images_data: str = os.path.join(path, 'IMAGES')
+    masks_data: str = os.path.join(path, 'MASKS')
 
 @dataclass
 class DimensionsConfig:
@@ -75,6 +76,8 @@ if __name__ == "__main__":
     train = ModelTrainer()
     logging.info("training started")
     train.initialize_training(train_dataset=train_dataset,epoch=dim_cofig.EPOCHS)
+
+
 
 
 

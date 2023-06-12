@@ -21,7 +21,7 @@ from src.utils import save_object
 
 @dataclass
 class ModelTrainerConfig:
-    trained_model_file_path: str = os.path.join('artifacts','model.pkl')
+    trained_model_file_path: str = os.path.join('artifacts','model1.h5')
 
 @dataclass
 class ModelDimensionConfig:
@@ -29,10 +29,6 @@ class ModelDimensionConfig:
     img_width = 128
     num_channels = 3
 
-    EPOCHS = 100
-    VAL_SUBSPLITS = 5
-    BUFFER_SIZE = 500
-    BATCH_SIZE = 32
 
 class ModelTrainer:
    
@@ -51,8 +47,8 @@ class ModelTrainer:
                 history = unet.fit(train_dataset,epochs=epoch)
                 logging.info("Training completed")
 
-                logging.info('Saved trained model.pkl')
-                save_object(self.model_trainer_config.trained_model_file_path,history)
+                logging.info('Saved trained model_cloth.h5')
+                unet.save(self.model_trainer_config.trained_model_file_path)
 
             except Exception as e:
                 raise CustomException(e,sys)
