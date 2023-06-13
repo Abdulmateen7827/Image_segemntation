@@ -37,7 +37,6 @@ class PredictPipeline:
         # try:
         model_path = 'artifacts/model1.h5'
         model = tf.keras.models.load_model(model_path)
-        
         pred = model.predict(self.process_img(images))
         self.display(self.create_mask(pred))
 
@@ -62,4 +61,4 @@ class PredictPipeline:
 
 if __name__=="__main__":
     predict = PredictPipeline()
-    predict.predict('/Users/abdulmateen/Downloads/archive/IMAGES/img_0017.jpeg')
+    predict.predict('/Users/abdulmateen/Downloads/archive/IMAGES/img_0045.jpeg')
