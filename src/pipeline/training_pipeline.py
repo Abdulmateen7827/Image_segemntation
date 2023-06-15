@@ -21,7 +21,7 @@ from src.utils import save_object
 
 @dataclass
 class ModelTrainerConfig:
-    trained_model_file_path: str = os.path.join('artifacts','model1.h5')
+    trained_model_file_path: str = os.path.join('artifacts','model_cloth_64.h5')
 
 @dataclass
 class ModelDimensionConfig:
@@ -44,10 +44,14 @@ class ModelTrainer:
                     loss=tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True),
                     metrics=['accuracy'])
                 
-                history = unet.fit(train_dataset,epochs=epoch)
+                logging.info('Using Apple metal GPU to train')
+                print(tf.config.list_physical_devices())
+
+                with tf.device('/device:GPU:0'):
+                    history = unet.fit(train_dataset,epochs=epoch)
                 logging.info("Training completed")
 
-                logging.info('Saved trained model_cloth.h5')
+                logging.info('Saved trained model_cloth_64.h5')
                 unet.save(self.model_trainer_config.trained_model_file_path)
 
             except Exception as e:

@@ -18,7 +18,7 @@ from tensorflow.keras.layers import concatenate
 
 class Blocks:
     try:
-        def conv_block(self,inputs=None, n_filters=32, dropout_prob=0, max_pooling=True):
+        def conv_block(self,inputs=None, n_filters=64, dropout_prob=0, max_pooling=True):
 
             """
             Convolutional downsampling block
@@ -61,7 +61,7 @@ class Blocks:
             
             return next_layer, skip_connection
         
-        def upsampling_block(self,expansive_input, contractive_input, n_filters=32):
+        def upsampling_block(self,expansive_input, contractive_input, n_filters=64):
             """
             Convolutional upsampling block
             
@@ -104,7 +104,7 @@ block = Blocks()
 
 class Unet:
     try:
-        def unet_model(self,input_size=(96, 128, 3), n_filters=32, n_classes=59):
+        def unet_model(self,input_size=(96, 128, 3), n_filters=64, n_classes=59):
             """
             Unet model
             
