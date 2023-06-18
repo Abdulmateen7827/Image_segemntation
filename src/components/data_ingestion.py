@@ -49,9 +49,7 @@ class DataIngestion:
             logging.info("Data ingestion is completed")
 
             return dataset
-            # for image, mask in dataset.take(1):
-            #     print(image)
-            #     print(mask)
+
 
 
             

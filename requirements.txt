@@ -1,8 +1,8 @@
-# seaborn 
-# pandas
-# numpy
-# matplotlib
-# tensorflow
-# imageio
-# pickle
+seaborn 
+pandas
+numpy
+matplotlib
+tensorflow
+imageio
+pickle
 # dill

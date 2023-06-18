@@ -21,7 +21,7 @@ from src.utils import save_object
 
 @dataclass
 class ModelTrainerConfig:
-    trained_model_file_path: str = os.path.join('artifacts','model_cloth_64.h5')
+    trained_model_file_path: str = os.path.join('artifacts','model_car.h5')
 
 @dataclass
 class ModelDimensionConfig:
@@ -51,7 +51,7 @@ class ModelTrainer:
                     history = unet.fit(train_dataset,epochs=epoch)
                 logging.info("Training completed")
 
-                logging.info('Saved trained model_cloth_64.h5')
+                logging.info('Saved trained model_car.h5')
                 unet.save(self.model_trainer_config.trained_model_file_path)
 
             except Exception as e:
