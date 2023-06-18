@@ -1,8 +1,9 @@
-seaborn 
+# seaborn 
 pandas
 numpy
 matplotlib
-tensorflow
-imageio
-pickle
+tensorflow-macos==2.9.0
+tensorflow-metal==0.5.1
+# imageio
+# pickle
 # dill
