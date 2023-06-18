@@ -12,7 +12,7 @@ from src.pipeline.training_pipeline import ModelTrainer
 from src.pipeline.prediction_pipeline import PredictPipeline
 
 
-path = '/Users/abdulmateen/Downloads/archive' 
+path = '/Users/abdulmateen/Downloads/Datasets/car-segmentation' 
 
 @dataclass
 class DataIngestionConfig:
