@@ -23,3 +23,4 @@ This model was trained on labels being cars and their target being masks. The da
 2. Download the image dataset and save locally. The default path is data/ in this repository.
 3. Install the project dependencies
 ``` pip install python
+```
