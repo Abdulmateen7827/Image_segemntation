@@ -33,6 +33,9 @@ For windows:
 Segmentation\Scripts\activate
 ```
 2. Clone the repository
+```python
+git clone https://github.com/Abdulmateen7827/Image_segmentation.git
+```
 3. Download the image dataset and save locally. The default path is data/ in this repository.
 4. Install the project dependencies:
 ```python 
