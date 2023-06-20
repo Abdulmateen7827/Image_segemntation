@@ -19,9 +19,23 @@ If you are interested in the competition or just want to learn more about the pr
 This model was trained on labels being cars and their target being masks. The data can be found here on [kaggle](https://www.kaggle.com/datasets/intelecai/car-segmentation)
 
 # Usage
-1. Clone the repository
-2. Download the image dataset and save locally. The default path is data/ in this repository.
-3. Install the project dependencies
+1. Create a virtual environment
 ```python 
-pip install python
+python3.9 -m venv Segmentation
+```
+2. Clone the repository
+3. Download the image dataset and save locally. The default path is data/ in this repository.
+4. Install the project dependencies:
+```python 
+pip install -r requirements.txt
+```
+5. Start the training by :
+```python 
+python src/components/data_ingestion.py
+```
+6. For prediction using streamlit:
+```python
+streamlit run streamlit_app.py
+
+
 
