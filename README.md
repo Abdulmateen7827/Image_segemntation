@@ -19,9 +19,18 @@ If you are interested in the competition or just want to learn more about the pr
 This model was trained on labels being cars and their target being masks. The data can be found here on [kaggle](https://www.kaggle.com/datasets/intelecai/car-segmentation)
 
 # Usage
-1. Create a virtual environment
+1. Create a virtual environment in the command line
 ```python 
 python3.9 -m venv Segmentation
+```
+Activate the env:
+For macos:
+```python 
+source Segmentation/bin/activate
+```
+For windows:
+```python
+Segmentation\Scripts\activate
 ```
 2. Clone the repository
 3. Download the image dataset and save locally. The default path is data/ in this repository.
