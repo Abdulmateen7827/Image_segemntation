@@ -4,3 +4,4 @@ pandas
 numpy
 matplotlib
 tensorflow
+python==3.9

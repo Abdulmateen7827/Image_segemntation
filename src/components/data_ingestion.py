@@ -12,13 +12,13 @@ from src.pipeline.training_pipeline import ModelTrainer
 from src.pipeline.prediction_pipeline import PredictPipeline
 
 
-path = '/Users/abdulmateen/Downloads/Datasets/car-segmentation' 
+path = 'data/images' 
 
 @dataclass
 class DataIngestionConfig:
 
-    images_data: str = os.path.join(path, 'IMAGES')
-    masks_data: str = os.path.join(path, 'MASKS')
+    images_data: str = os.path.join(path, 'images')
+    masks_data: str = os.path.join(path, 'masks')
 
 @dataclass
 class DimensionsConfig:

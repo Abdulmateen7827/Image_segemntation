@@ -18,4 +18,8 @@ If you are interested in the competition or just want to learn more about the pr
 # Dataset
 This model was trained on labels being cars and their target being masks. The data can be found here on [kaggle](https://www.kaggle.com/datasets/intelecai/car-segmentation)
 
-<!-- jcaklkjcnejcasncjnasjcnalsjnc -->
+# Usage
+1. Clone the repository
+2. Download the image dataset and save locally. The default path is data/ in this repository.
+3. Install the project dependencies
+``` pip install python
