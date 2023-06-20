@@ -35,7 +35,7 @@ class PredictPipeline:
         def predict(self,images):
             logging.info("Predicting")
             # try:
-            model_path = 'artifacts/model1.h5'
+            model_path = 'artifacts/model.h5'
             model = tf.keras.models.load_model(model_path)
             pred = model.predict(self.process_img(images))
             self.display(self.create_mask(pred))

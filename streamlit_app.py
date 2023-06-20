@@ -4,7 +4,7 @@ from PIL import Image
 import numpy as np
 
 
-model_in = tf.keras.models.load_model('artifacts/model1.h5')
+model_in = tf.keras.models.load_model('artifacts/model.h5')
 
 def welcome():
     return 'Hello'
